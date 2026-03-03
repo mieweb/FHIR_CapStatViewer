@@ -257,29 +257,35 @@ main {
 }
 
 /* Overview cards */
-.overview-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
+.overview-list {
     margin-top: 1rem;
-}
-
-.overview-card {
     background: white;
-    padding: 1.5rem;
     border-radius: 8px;
     border: 1px solid #e1e8ed;
 }
 
-.overview-card h3 {
-    color: #04A454;
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
+.overview-row {
+    display: flex;
+    border-bottom: 1px solid #e1e8ed;
+    padding: 0.75rem 1rem;
 }
 
-.overview-card p {
+.overview-row:last-child {
+    border-bottom: none;
+}
+
+.overview-label {
+    width: 262px;
+    flex-shrink: 0;
+    color: #04A454;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.overview-value {
+    flex: 1;
     color: #666;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
 /* Contact Information */
@@ -663,8 +669,13 @@ footer {
         padding: 1.5rem;
     }
     
-    .overview-grid {
-        grid-template-columns: 1fr;
+    .overview-row {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .overview-label {
+        width: 100%;
     }
 }
 

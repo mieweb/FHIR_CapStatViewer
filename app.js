@@ -418,40 +418,40 @@ Try:
         const overviewContent = document.getElementById('overview-content');
         
         const overviewHtml = `
-            <div class="overview-grid">
+            <div class="overview-list">
                 ${data.title ? `
-                <div class="overview-card">
-                    <h3>Title</h3>
-                    <p>${data.title}</p>
+                <div class="overview-row">
+                    <div class="overview-label">Title</div>
+                    <div class="overview-value">${data.title}</div>
                 </div>
                 ` : ''}
-                <div class="overview-card">
-                    <h3>Server Name</h3>
-                    <p>${data.name || 'Not specified'}</p>
+                <div class="overview-row">
+                    <div class="overview-label">Server Name</div>
+                    <div class="overview-value">${data.name || 'Not specified'}</div>
                 </div>
-                <div class="overview-card">
-                    <h3>FHIR Version</h3>
-                    <p>${data.fhirVersion}</p>
+                <div class="overview-row">
+                    <div class="overview-label">FHIR Version</div>
+                    <div class="overview-value">${data.fhirVersion}</div>
                 </div>
-                <div class="overview-card">
-                    <h3>Status</h3>
-                    <p>${data.status || 'Unknown'}</p>
+                <div class="overview-row">
+                    <div class="overview-label">Status</div>
+                    <div class="overview-value">${data.status || 'Unknown'}</div>
                 </div>
-                <div class="overview-card">
-                    <h3>Date</h3>
-                    <p>${data.date ? new Date(data.date).toLocaleDateString() : 'Not specified'}</p>
+                <div class="overview-row">
+                    <div class="overview-label">Date</div>
+                    <div class="overview-value">${data.date ? new Date(data.date).toLocaleDateString() : 'Not specified'}</div>
                 </div>
-                <div class="overview-card">
-                    <h3>Publisher</h3>
-                    <p>${data.publisher || 'Not specified'}</p>
+                <div class="overview-row">
+                    <div class="overview-label">Publisher</div>
+                    <div class="overview-value">${data.publisher || 'Not specified'}</div>
                 </div>
-                <div class="overview-card">
-                    <h3>Software/Name</h3>
-                    <p>${data.software?.name || 'Not specified'}</p>
+                <div class="overview-row">
+                    <div class="overview-label">Software/Name</div>
+                    <div class="overview-value">${data.software?.name || 'Not specified'}</div>
                 </div>
-                <div class="overview-card">
-                    <h3>Kind</h3>
-                    <p>${data.kind || 'Not specified'}</p>
+                <div class="overview-row">
+                    <div class="overview-label">Kind</div>
+                    <div class="overview-value">${data.kind || 'Not specified'}</div>
                 </div>
             </div>
             ${data.description ? `<div style="margin-top: 1.5rem;"><h3>Description</h3><p>${data.description}</p></div>` : ''}
