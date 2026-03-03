@@ -4,6 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
+# Change to your deployment user (e.g., dcarlson, ubuntu, etc.)
 User=www-data
 Group=www-data
 WorkingDirectory=/var/www/fhircapstatviewer.os.mieweb.org

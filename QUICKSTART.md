@@ -10,7 +10,8 @@
 ### 1. Copy Files
 ```bash
 # Create directory on production server (run from your local machine)
-ssh user@fhircapstatviewer.os.mieweb.org "sudo mkdir -p /var/www/fhircapstatviewer.os.mieweb.org && sudo chown \$USER:\$USER /var/www/fhircapstatviewer.os.mieweb.org"
+# Replace 'user' with your actual username (e.g., dcarlson)
+ssh user@fhircapstatviewer.os.mieweb.org "sudo mkdir -p /var/www/fhircapstatviewer.os.mieweb.org && sudo chown \$USER: /var/www/fhircapstatviewer.os.mieweb.org"
 
 # Upload all files to your web server
 scp -r * user@fhircapstatviewer.os.mieweb.org:/var/www/fhircapstatviewer.os.mieweb.org/

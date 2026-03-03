@@ -4,7 +4,8 @@
 
 ```bash
 # Create directory on production server (run from your local machine)
-ssh user@fhircapstatviewer.os.mieweb.org "sudo mkdir -p /var/www/fhircapstatviewer.os.mieweb.org && sudo chown \$USER:\$USER /var/www/fhircapstatviewer.os.mieweb.org"
+# Replace 'user' with your actual username
+ssh user@fhircapstatviewer.os.mieweb.org "sudo mkdir -p /var/www/fhircapstatviewer.os.mieweb.org && sudo chown \$USER: /var/www/fhircapstatviewer.os.mieweb.org"
 
 # Copy all files to the server
 scp -r * user@fhircapstatviewer.os.mieweb.org:/var/www/fhircapstatviewer.os.mieweb.org/
